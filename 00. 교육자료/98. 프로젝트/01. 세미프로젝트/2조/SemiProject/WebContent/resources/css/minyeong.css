@@ -1,0 +1,473 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+button[type="button"],
+input[type="submit"],
+input[type="button"] {
+	cursor: pointer;
+}
+
+.wrap {
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 99;
+	box-shadow: 0px 10px 10px #fff;
+}
+.header-inner {
+  width: 980px;
+  margin: 0 auto;
+	padding: 20px 0;
+}
+.header-inner .before-login button {
+	position: relative;
+	font-size: 14px;
+}
+.header-inner .before-login button:first-child {
+	padding-right: 10px;
+	margin-right: 4px;
+}
+.header-inner .before-login button:first-child:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 1px;
+	height: 14px;
+	background: #888;
+	transform: translateY(-50%);
+}
+.header-inner .after-login table {
+	border: 0;
+}
+.header-inner .after-login table td {
+	padding: 0 5px;
+}
+.header-inner .after-login button {
+	font-size: 14px;
+	border: 0;
+	background: none;
+	cursor: pointer;
+}
+.member-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header + .container {
+  margin-top: -1px;
+}
+header .logo img {
+	width: 160px;
+}
+
+
+.container {
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	margin-bottom: 100px;
+}
+.contents {
+	position: relative;
+	width: 980px;
+	min-height: 100%;
+	height: 100%;
+	padding-top: 128px;
+	margin: 0 auto;
+}
+.page-tit {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.menu-bar {
+  width: 100%;
+  background: #ff9227;
+}
+.menu-bar ul {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin: 0 auto;
+}
+.menu-bar li {
+  list-style: none;
+  font-size: 18px;
+}
+.menu-bar li a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 30px;
+}
+
+footer {
+  background: #eee;
+  padding: 30px 0;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  font-size: 12px;
+  margin: 0 auto;
+}
+.footer-inner .logo img {
+  width: 100px;
+}
+.footer-inner .team ul {
+  display: flex;
+}
+.footer-inner .team ul li {
+  list-style: none;
+}
+.footer-inner .team ul li + li {
+  margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* main > 검색 */
+.search {
+  width: 440px;
+  display: flex;
+  align-items: center;
+  margin: 30px auto;
+}
+.search input {
+  width: 400px;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.search input::placeholder {
+  font-size: 16px;
+}
+.search button {
+  position: relative;
+  width: 50px;
+  height: 45px;
+  border: 1px solid #4575cb;
+  border-radius: 0 5px 5px 0;
+  background: #4575cb;
+  padding: 0;
+}
+.search button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  background: url(../images/icon_search2.png) 0 0 no-repeat;
+  transform: translate(-50%, -50%);
+  background-size: 28px;
+}
+
+/* main > 지도 선택 */
+.select-map {
+	width: 980px;
+  position: relative;
+  text-align: center;
+}
+.select-map .img-map {
+  width: 900px;
+  margin: 50px auto 0;
+}
+.select-map .location-list li {
+  position: absolute;
+  top: 70px;
+  left: 225px;
+  width: 85px;
+  height: 65px;
+  list-style: none;
+  text-indent: -999em;
+}
+.select-map .location-list li:nth-child(2) {
+  top: 370px;
+  left: 50px;
+  width: 50px;
+  height: 40px;
+}
+.select-map .location-list li:nth-child(3) {
+  top: 250px;
+  left: 135px;
+  width: 50px;
+  height: 40px;
+}
+.select-map .location-list li:nth-child(4) {
+  top: 370px;
+  left: 146px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(5) {
+  top: 310px;
+  left: 195px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(6) {
+  top: 260px;
+  left: 299px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(7) {
+  top: 220px;
+  left: 460px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(8) {
+  top: 170px;
+  left: 600px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(9) {
+  top: 150px;
+  left: 720px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(10) { /* 우도 */
+  top: 110px;
+  left: 880px;
+  width: 45px;
+  height: 80px;
+}
+.select-map .location-list li:nth-child(11) { /* 성산읍 */
+  top: 255px;
+  left: 794px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(12) { /* 표선면 */
+  top: 310px;
+  left: 700px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(13) { /* 남원읍 */
+  top: 360px;
+  left: 590px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(14) { /* 서귀포시 */
+  top: 400px;
+  left: 480px;
+  width: 61px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(15) { /* 중문 */
+  top: 410px;
+  left: 380px;
+  width: 40px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(16) { /* 안덕면 */
+  top: 415px;
+  left: 250px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(17) { /* 대정읍 */
+  top: 445px;
+  left: 160px;
+  width: 45px;
+  height: 30px;
+}
+.select-map .location-list li:nth-child(18) { /* 가파도 */
+  top: 555px;
+  left: 165px;
+  width: 65px;
+  height: 40px;
+}
+.select-map .location-list li:nth-child(19) { /* 마라도 */
+  top: 605px;
+  left: 165px;
+  width: 65px;
+  height: 40px;
+}
+.select-map .location-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* main > 여행지 thumbnail list */
+.thumb-list {
+  margin-top: 50px;
+}
+.thumb-list h3 {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.thumb-list h3::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #ea570f;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.thumb-list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumb-list ul li {
+  list-style: none;
+  width: calc(100% / 4 - 10px);
+  margin-bottom: 20px;
+}
+.thumb-list ul li:nth-child(5) {
+	margin-left: 0;
+}
+.thumb-list ul li + li {
+	margin-left: 13px;
+}
+.thumb-list ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.thumb-list ul li .img-thumb {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.thumb-list ul li .img-thumb img {
+  width: 100%;
+  height: 100%;
+}
+.thumb-list ul li strong {
+  width: 95%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  letter-spacing: -1px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+  font-weight: 500;
+}
+.thumb-list ul li p {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  letter-spacing: -1px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* 여행지 */
+.thumb-list.spot {
+  display: block;
+}
+.thumb-list.spot ul {
+  display: block;
+  overflow: hidden;
+}
+.thumb-list.spot ul li {
+  float: left;
+  width: 186px;
+  margin-right: 10px;
+}
+.thumb-list.spot ul li + li {
+	margin-left: 0;
+}
+.thumb-list.spot ul li:first-child{
+  width: 585px;
+  margin-right: 10px;
+}
+.thumb-list.spot ul li:first-child .img-thumb {
+  height: 378px;
+}
+.thumb-list.spot ul li:nth-of-type(3),
+.thumb-list.spot ul li:nth-of-type(5) {
+  margin-right: 0;
+}
+.thumb-list .btn-more {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  background: #4575cb;
+  border: none;
+  border-radius: 5px;
+  margin: 20px auto 100px;
+  padding: 5px 15px;
+
+}
+
+
+
+.btn-wrap a {
+	float: none;
+	display: inline-block;
+	color: #fff;
+	background: #ff9227;
+	padding: 7px 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+
+
+.map-wrap {
+	margin-top: 20px;
+}
+.map-wrap p {
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 20px;
+}
+.map-wrap p:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: url(/SemiProject/resources/images/maker.png) 0 0 no-repeat;
+	background-size: 20px;
+	transform: translateY(-50%);
+}

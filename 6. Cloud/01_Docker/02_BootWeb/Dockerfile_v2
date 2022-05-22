@@ -1,0 +1,15 @@
+FROM openjdk:11
+LABEL maintainer "kh<ismoon@iei.com>"
+LABEL version="1.0"
+COPY 05_SpringBoot_MVC-0.0.1-SNAPSHOT.jar /root
+# 내부로부터 값을 전달 받을 수 있는 PORT 변수를 선언 (기본값 : 8088)
+ARG PORT=8088
+# 내부로부터 값을 전달 받을 수 있는 PROFILE 변수를 선언 (기본값 : dev)
+ARG PROFILE=dev
+ENV TZ=Asia/Seoul
+ENV PROFILE_ENV=${PROFILE}
+WORKDIR /root
+RUN pwd
+RUN ["echo", "hello"]
+EXPOSE ${PORT}
+CMD ["java", "-jar", "05_SpringBoot_MVC-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=${PROFILE_ENV}"]
